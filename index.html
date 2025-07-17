@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero Ball: Villain Destroyer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="game-container">
+    <canvas class="game-canvas" id="gameCanvas" width="800" height="600"></canvas>
+
+    <div class="ui-overlay">
+        <div class="score-panel">
+            <div>Score: <span id="scoreValue">0</span></div>
+            <div>Killed: <span id="killCount">0</span></div>
+            <div>Best: <span id="highScoreValue">0</span></div>
+        </div>
+
+        <div class="start-screen" id="startScreen">
+            <h1>🌀 ORB DEFENDER 🌀</h1>
+            <p>Dark forces are invading from the skies!</p>
+            <p>⚡ <strong>CLICK</strong> to blast enemies with energy pulses!</p>
+            <p>🚀 <strong>SPACE</strong> to soar and evade danger!</p>
+            <p>🛑 Stay alert – they're everywhere!</p>
+            <button class="start-btn" onclick="startGame()">BEGIN THE DEFENSE</button>
+        </div>
+
+        <div class="game-over" id="gameOverScreen">
+            <h2>☠️ CITY OVERRUN! ☠️</h2>
+            <p>The shield is broken. Evil reigns.</p>
+            <p>Score: <span id="finalScore">0</span></p>
+            <p>Villains Destroyed: <span id="finalKills">0</span></p>
+            <button class="start-btn" onclick="resetGame()">REDEPLOY ORB</button>
+        </div>
+
+        <div class="ammo-text">ENERGY</div>
+        <div class="ammo-bar">
+            <div class="ammo-fill" id="ammoFill"></div>
+        </div>
+
+        <div class="instructions">
+            Click to fire • Space to fly • Defend your city from the shadows!
+        </div>
+    </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
